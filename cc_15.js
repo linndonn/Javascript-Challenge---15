@@ -1,6 +1,5 @@
 //Task 2 - Adding Risk Items
  
-const riskDashboard = document.getElementById('riskDashboard');  
 function addRiskItem(riskName, riskLevel, department) { 
     if (riskName && riskLevel && department) { 
     const riskDashboard = document.getElementById('riskDashboard');  
@@ -13,7 +12,7 @@ function addRiskItem(riskName, riskLevel, department) {
     riskNameHeader.textContent = riskName; 
 
     const riskLevelParagraph = document.createElement('p'); 
-    riskLevelParagraph.textContent = `Risk Level: ${riskLevel}`; 
+    riskLevelParagraph.textContent = `riskLevel: ${riskLevel}`; 
     riskLevelParagraph.classList.add('riskLevel'); 
 
     const departmentParagraph = document.createElement('p'); 
@@ -28,10 +27,9 @@ function addRiskItem(riskName, riskLevel, department) {
  
     resolveButton.addEventListener('click', function(event) { 
         event.stopPropagation(); 
-    }
-    { 
-    riskDashboard.removeChild(riskCard);  
-     });
+        riskDashboard.removeChild(riskCard);  
+        
+    });
     
 
      //Task 4 - Risk Categorization 
@@ -103,4 +101,4 @@ increaseRiskLevelsButton.classList.add('increaseRiskLevelsButton');
 
 increaseRiskLevelsButton.addEventListener('click', increaseRiskLevels);  
 
-document.body.appendChild(increaseRiskLevelsButton); 
+document.body.appendChild(increaseRiskLevelsButton); bu
