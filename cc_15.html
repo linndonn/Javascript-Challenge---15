@@ -1,0 +1,58 @@
+<!--Task 1 - Base Structure Setup-->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Management Dashboard</title> <!--Adding the title-->
+</head>
+
+<!-- Adding in styles for header body, footer, employee container, and employee cards-->
+ 
+<style>
+    header {
+        font-family: 'Times New Roman', Times, serif, sans-serif;
+         margin: 18px;
+         padding: 18px;
+         text-align: center;
+         background-color: rgb(23, 153, 5);
+         width: 100%
+         
+    }
+    
+    body { 
+         font-family: 'Times New Roman', Times, serif, sans-serif;
+         margin: 18px;
+         padding: 18px;
+    } 
+    footer {
+            position: center;
+            bottom: 0;
+            left: 0;
+            background-color: rgb(23, 153, 5);
+            width: 100%;
+    }
+
+</style>
+
+<body>
+    <header>
+        <h1>Risk Management Dashboard</h1>  
+    </header>
+
+    <main>
+        <div id="riskDashboard">    
+        </div>
+
+        <form id="addRiskForm"></form> 
+        <label for="riskItem">Enter a Risk Item:</label> 
+            <input type="text" id="riskItem" name="riskItem" required> 
+            <button type="submit">Add Risk Item</button> 
+        </form>
+    </div>
+    </main>
+    <footer>Antiguan Developing Corp</footer>
+    <script src="cc_15.js"></script> 
+</body>
+</html>
