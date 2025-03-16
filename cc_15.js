@@ -20,9 +20,21 @@ function addRiskItem(riskName, riskLevel, department) {
     departmentParagraph.textContent = `Department: ${department}`; 
     departmentParagraph.classList.add('department'); 
 
+    //Task 3 - Removing Risk Items
+
+    const resolveButton = document.createElement('button'); 
+    resolveButton.textContent = 'Resolve'; 
+    resolveButton.classList.add('resolveButton'); 
+ 
+    resolveButton.addEventListener('click', function() 
+    { 
+    riskDashboard.removeChild(riskCard);  
+     });
+
     riskCard.appendChild(riskNameHeader); 
     riskCard.appendChild(riskLevelParagraph); 
     riskCard.appendChild(departmentParagraph); 
+    riskCard.appendChild(resolveButton);
 
     riskDashboard.appendChild(riskCard); 
     }
@@ -42,3 +54,4 @@ function addRiskItem(riskName, riskLevel, department) {
 // Task 2 Test Data
 addRiskItem("Data Breach", "High", "IT");
 addRiskItem("Supply Chain Disruption", "Medium", "Operations");
+addRiskItem("Market Fluctuations", "High", "Finance");
