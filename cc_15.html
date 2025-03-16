@@ -20,6 +20,28 @@
          width: 100%
          
     }
+
+    #riskDashboard {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 15px;
+     }
+     .riskCard {
+         border: 1px solid #000000;
+         padding: 18px;
+         margin: 22px 0;
+         border-radius: 5px;
+         background-color: #013220;
+         color: #070707;
+         width: 300px;
+     }
+ 
+     .riskCard .riskLevel {
+         font-weight: bold;
+     }
+ 
+ 
     
     body { 
          font-family: 'Times New Roman', Times, serif, sans-serif;
@@ -46,8 +68,17 @@
         </div>
 
         <form id="addRiskForm"></form> 
-        <label for="riskItem">Enter a Risk Item:</label> 
-            <input type="text" id="riskItem" name="riskItem" required> 
+        <label for="addRiskItem">Enter a Risk Item:</label> 
+            <input type="text" id="riskName" name="riskName" required> 
+            <label for="department">Department:</label> 
+             <input type="text" id="department" name="department" required> 
+            <label for="riskLevel">Risk Level:</label> 
+             <select id="riskLevel" name="riskLevel" required> 
+                 <option value="Low">Low</option> 
+                 <option value="Medium">Medium</option> 
+                 <option value="High">High</option> 
+         </select>
+         
             <button type="submit">Add Risk Item</button> 
         </form>
     </div>
