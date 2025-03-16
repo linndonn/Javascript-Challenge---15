@@ -31,6 +31,16 @@ function addRiskItem(riskName, riskLevel, department) {
     riskDashboard.removeChild(riskCard);  
      });
 
+     //Task 4 - Risk Categorization 
+
+     if (riskLevel === 'Low') {  
+        riskCard.style.backgroundColor = '#00FF00'; 
+    } else if (riskLevel === 'Medium') {  
+        riskCard.style.backgroundColor = '#FFFF00';  
+    } else if (riskLevel === 'High') { 
+        riskCard.style.backgroundColor = '#FF0000';  
+    }
+// Task 4 - Complete
     riskCard.appendChild(riskNameHeader); 
     riskCard.appendChild(riskLevelParagraph); 
     riskCard.appendChild(departmentParagraph); 
@@ -51,7 +61,9 @@ function addRiskItem(riskName, riskLevel, department) {
     form.reset(); 
     });
 
-// Task 2 Test Data
+// Test Data
+addRiskItem("Cybersecurity Threat", "High", "IT");
+addRiskItem("HR Compliance Issue", "Low", "Human Resources");
+addRiskItem("Market Fluctuations", "High", "Finance");
 addRiskItem("Data Breach", "High", "IT");
 addRiskItem("Supply Chain Disruption", "Medium", "Operations");
-addRiskItem("Market Fluctuations", "High", "Finance");
