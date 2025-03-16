@@ -67,3 +67,37 @@ addRiskItem("HR Compliance Issue", "Low", "Human Resources");
 addRiskItem("Market Fluctuations", "High", "Finance");
 addRiskItem("Data Breach", "High", "IT");
 addRiskItem("Supply Chain Disruption", "Medium", "Operations");
+addRiskItem("Employee Retention", "Low", "HR");
+
+// Task 5: Bulk Risk Update
+
+function increaseRiskLevels() { 
+    const riskDashboard = document.getElementById('riskDashboard');  
+    const riskCards = riskDashboard.getElementsByClassName('riskCard'); 
+
+for (let i = 0; i < riskCards.length; i++) {  
+     const card = riskCards[i];
+     const riskLevelParagraph = card.querySelector('.riskLevel');  
+
+let currentRiskLevel = riskLevelParagraph.textContent.replace("Risk Level: ", "");  
+
+if (currentRiskLevel === "Low") {  
+      currentRiskLevel = "Medium"; 
+      riskLevelParagraph.textContent = `Risk Level: Medium`;  
+      card.style.backgroundColor = "#FFFF00";  
+}
+else if (currentRiskLevel === "Medium") { 
+      currentRiskLevel = "High"; 
+      riskLevelParagraph.textContent = `Risk Level: High`; 
+      card.style.backgroundColor = "#FF0000";  
+}
+}
+}
+
+const increaseRiskLevelsButton = document.createElement('button'); 
+increaseRiskLevelsButton.textContent = 'Increase Risk Levels';  
+increaseRiskLevelsButton.classList.add('increaseRiskLevelsButton'); 
+
+increaseRiskLevelsButton.addEventListener('click', increaseRiskLevels);  
+
+riskDashboard.appendChild(increaseRiskLevelsButton); 
