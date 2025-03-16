@@ -26,10 +26,13 @@ function addRiskItem(riskName, riskLevel, department) {
     resolveButton.textContent = 'Resolve'; 
     resolveButton.classList.add('resolveButton'); 
  
-    resolveButton.addEventListener('click', function() 
+    resolveButton.addEventListener('click', function(event) { 
+        event.stopPropagation(); 
+    }
     { 
     riskDashboard.removeChild(riskCard);  
      });
+    
 
      //Task 4 - Risk Categorization 
 
@@ -100,4 +103,4 @@ increaseRiskLevelsButton.classList.add('increaseRiskLevelsButton');
 
 increaseRiskLevelsButton.addEventListener('click', increaseRiskLevels);  
 
-riskDashboard.appendChild(increaseRiskLevelsButton); 
+document.body.appendChild(increaseRiskLevelsButton); 
